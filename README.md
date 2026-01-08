@@ -1,40 +1,41 @@
 # Salesforce AI Productivity Suite
 
 ## Overview
-This project represents my work on enhancing Salesforce user productivity by introducing AI-assisted features directly into CRM workflows. The goal was to improve communication quality and reduce manual effort for users working with feedback, notes, and CRM content.
+This project represents my work on building AI-assisted productivity features inside Salesforce.
+The goal was to help users write better content, rephrase feedback professionally, and improve
+daily CRM efficiency using AI — without compromising Salesforce performance or security.
 
-The solution focuses on clean architecture, scalability, and safe asynchronous processing.
+The solution focuses on clean architecture, governor-limit safety, and real business usability.
 
 ## What This Project Solves
-- Improves quality of written feedback and CRM notes
-- Reduces repetitive manual work
-- Keeps Salesforce governor limits safe
-- Demonstrates real-world AI integration patterns
+- Reduces manual effort in writing CRM content
+- Improves communication quality with professional rephrasing
+- Allows flexibility to switch AI models without code changes
+- Ensures scalable and maintainable Apex design
 
 ## Key Features
-- AI-assisted text rephrasing
+- AI-assisted text generation and rephrasing
 - Dynamic AI model selection
-- Secure callout handling
+- Secure Apex callout structure
 - Asynchronous processing for scalability
+- Clean separation of UI, logic, and database layers
 
 ## Architecture Overview
-Lightning Component  
-→ Apex Controller  
-→ Utility Layer (logic only, no DML)  
-→ Async Layer (Future methods)  
-→ External AI service  
-→ Salesforce database
+User interacts with Lightning UI →  
+Request handled by Apex Controller →  
+Business logic processed in Utility Layer (no DML) →  
+Async layer performs callouts →  
+Response returned safely to Salesforce
 
-## Technology Stack
+## Technologies Used
 - Salesforce Apex
-- Lightning (Aura / LWC)
-- REST API callouts
-- Asynchronous Apex
+- Lightning Aura / LWC
+- REST-based API integration
+- Asynchronous Apex (@future)
 
 ## Notes
-This repository contains sample structures and patterns only.
-No proprietary or production code is included.
+This repository contains sample code and architecture patterns only.
+No proprietary or production data is included.
 
 ## Author
-Iqra Masood  
-Salesforce Developer
+Iqra Masood – Salesforce Developer
